@@ -1,17 +1,17 @@
 # 🐠 Marine Biodiversity Monitoring with YOLOv8
 
-This project uses a YOLOv8 deep learning model and a Flask API to automatically detect marine species in underwater videos.
+This project uses a YOLOv8 deep learning model and a Flask API to automatically detect marine species in underwater **images and videos**.
 
-It is part of a larger system for marine biodiversity monitoring, where users can upload underwater footage and get instant AI-based analysis of fish and marine life.
+It is part of a larger system for marine biodiversity monitoring, where users can upload marine media and get instant AI-based analysis of fish and marine life.
 
 ---
 
 ## 📌 What This Project Does
 
 - 🧠 Runs a YOLOv8 object detection model trained on marine species
-- 🎥 Accepts video uploads via a POST API endpoint (`/analyze`)
-- 🐟 Returns a list of detected species from the video
-- 🔁 Works with a front-end dashboard to upload videos and view results
+- 🖼️ Accepts **images** or 🎥 **videos** via a POST API endpoint (`/analyze`)
+- 🐟 Returns a list of detected species
+- 🌐 Supports integration with a front-end HTML dashboard hosted on GitHub Pages
 
 ---
 
@@ -19,36 +19,57 @@ It is part of a larger system for marine biodiversity monitoring, where users ca
 
 - Python + Flask
 - YOLOv8 (Ultralytics)
-- OpenCV (for reading video frames)
-- Render (to host the backend API)
-- HTML (frontend dashboard – coming soon!)
+- OpenCV (`cv2`)
+- PIL (for image processing)
+- Render (to host the backend)
+- GitHub Pages (for the frontend UI)
 
 ---
 
 ## 🚀 How to Use
 
-1. Clone this repository
-2. Place your `yolov8.pt` model in the project root
-3. Install the dependencies:
-4. Run the server:
-5. Use `/analyze` endpoint to upload a video and receive predictions
+1. **Clone this repository**
+2. Place your trained YOLOv8 model file as `yolov8.pt` in the project root
+3. Install the required libraries:
+pip install -r requirements.txt
+
+markdown
+نسخ
+تحرير
+4. Run the backend server:
+python app.py
+
+yaml
+نسخ
+تحرير
+5. Use a tool like Postman or your frontend to send a `POST` request to `/analyze` with a file (`image` or `video`)
 
 ---
 
 ## 🌍 Live API on Render
 
-Once deployed, the API will be live at:
-https://marine-backend-s8fq.onrender.com
+https://marine-backend-s8fq.onrender.com/analyze
 
-Use this URL in your HTML dashboard to send video files.
+yaml
+نسخ
+تحرير
+
+Use this URL in your HTML dashboard or test script to send media files and receive predictions.
 
 ---
 
 ## 📂 File Structure
 
+marine-backend/ ├── app.py # Flask server with YOLOv8 integration ├── yolov8.pt # Trained YOLOv8 model (placed here manually) ├── requirements.txt # Python dependencies └── temp/ # Folder for temporary video/image uploads
+
+yaml
+نسخ
+تحرير
+
+---
+
 ## 👩‍💻 Developed by
 
 **Sara Eshaaq & Team**  
 Project: *Utilization of Deep Learning for Marine Biodiversity Monitoring*  
-Year: 2025
-
+Year: 202
