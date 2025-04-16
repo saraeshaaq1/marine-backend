@@ -34,14 +34,9 @@ It is part of a larger system for marine biodiversity monitoring, where users ca
 pip install -r requirements.txt
 
 markdown
-نسخ
-تحرير
+
 4. Run the backend server:
 python app.py
-
-yaml
-نسخ
-تحرير
 5. Use a tool like Postman or your frontend to send a `POST` request to `/analyze` with a file (`image` or `video`)
 
 ---
@@ -50,21 +45,20 @@ yaml
 
 https://marine-backend-s8fq.onrender.com/analyze
 
-yaml
-نسخ
-تحرير
-
 Use this URL in your HTML dashboard or test script to send media files and receive predictions.
 
 ---
 
 ## 📂 File Structure
 
-marine-backend/ ├── app.py # Flask server with YOLOv8 integration ├── yolov8.pt # Trained YOLOv8 model (placed here manually) ├── requirements.txt # Python dependencies └── temp/ # Folder for temporary video/image uploads
+marine-backend/
+├── app.py # Flask server with YOLOv8 integration
+├── yolov8.pt # Trained YOLOv8 model (placed here manually)
+├── requirements.txt # Python dependencies 
+└── temp/ # Folder for temporary video/image uploads
 
-yaml
-نسخ
-تحرير
+
+
 
 ---
 
